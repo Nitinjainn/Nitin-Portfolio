@@ -1,2 +1,2 @@
-# Nitin-s-Portfolio
+# Nitin's Portfolio
 All about NiTiN 😀
