@@ -1,0 +1,120 @@
+import HackzenImg from '../assets/Hackzen.png';
+import VibetribeImg from '../assets/Vibetribe.png';
+import SolumaImg from '../assets/Soluma.png';
+import CryptifyImg from '../assets/Cryptify.png';
+
+const projects = [
+  {
+    title: 'HackZen',
+    subtitle: 'Hackathon Management Platform',
+    desc: 'Built HackZen, a full-stack hackathon management platform during internship at STPI. Engineered comprehensive features supporting multi-stage event lifecycles.',
+    tags: ['React', 'Vite', 'Tailwind', 'Node.js', 'Express', 'MongoDB'],
+    image: HackzenImg,
+    link: 'https://hackzen.vercel.app/',
+  },
+  {
+    title: 'Soluma',
+    subtitle: 'The Web3 Event Platform',
+    desc: 'A decentralized event platform that combines a seamless Web2 user experience with the power of the Solana blockchain. No seed phrases, no complexity—just events.',
+    tags: ['Solana', 'Web3', 'Blockchain', 'React'],
+    image: SolumaImg,
+    link: 'https://soluma.vercel.app/',
+  },
+  {
+    title: 'Cryptify',
+    subtitle: 'Decentralized Payment dApp',
+    desc: 'Contributed to Cryptify, a Web3 payment dApp enabling username-based transfers and escrow contracts. Focused on frontend development while gaining basic exposure to Web3 concepts.',
+    tags: ['React', 'Web3', 'Blockchain', 'Frontend'],
+    image: CryptifyImg,
+    link: 'https://cryptify-defi.vercel.app/',
+  },
+  {
+    title: 'VibeTribe',
+    subtitle: 'Decentralized Travel Platform',
+    desc: 'Web3-based decentralized travel and trip management platform designed for seamless collaborative planning and execution.',
+    tags: ['Web3', 'Blockchain', 'React', 'Tailwind'],
+    image: VibetribeImg,
+    link: 'https://vibetribew3.vercel.app/',
+  }
+];
+
+export default function Projects() {
+  return (
+    <div className="animate-slide-in space-y-10">
+      <div className="flex items-center gap-4 mb-8">
+        <h2 className="text-2xl font-semibold text-gray-900 relative">
+          Projects
+          <span className="absolute -bottom-2 left-0 w-10 h-0.5 bg-indigo-500 rounded-full"></span>
+        </h2>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {projects.map((p, i) => (
+          <div
+            key={i}
+            className="relative bg-white/60 backdrop-blur-xl border border-gray-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden"
+          >
+            {/* Visual Anchor Node */}
+            <div className="absolute top-0 right-10 w-12 h-1 bg-indigo-100 rounded-b-md z-20"></div>
+
+            {/* Elegant Static Watermark */}
+            <div className="absolute right-4 bottom-2 text-[45px] sm:text-[60px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 z-0">
+              {p.title}
+            </div>
+
+            {/* Inset Screen Frame */}
+            <div className="p-3 sm:p-4 pb-0 z-10 relative">
+              <div className="w-full h-36 sm:h-44 bg-gray-100 rounded-2xl overflow-hidden border border-gray-200/50 shadow-sm relative">
+                <img 
+                  src={p.image} 
+                  alt={p.title} 
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+            </div>
+
+            {/* Content Container */}
+            <div className="relative p-5 sm:p-6 z-10">
+              <div className="flex justify-between items-start gap-4 mb-3">
+                <div>
+                  <h3 className="text-[20px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug drop-shadow-sm">
+                    {p.title}
+                  </h3>
+                  <div className="text-[11px] font-bold text-indigo-500 uppercase tracking-widest mt-1">
+                    {p.subtitle}
+                  </div>
+                </div>
+                
+                {/* External Website Link */}
+                <a 
+                  href={p.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  title="Visit Website"
+                  className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-50 text-indigo-600 transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5 ml-0.5 mb-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </a>
+              </div>
+
+              <p className="text-[13px] text-gray-600 leading-relaxed mb-6 mt-2 max-w-[95%]">
+                {p.desc}
+              </p>
+
+              <div className="pt-4 border-t border-gray-100/80 flex flex-wrap gap-2">
+                {p.tags.map((tag) => (
+                  <span key={tag} className="px-3 py-1 bg-gray-50/80 text-gray-600 border border-gray-100 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest rounded-xl">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

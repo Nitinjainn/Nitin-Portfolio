@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-inter antialiased bg-gray-50 text-gray-800;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl font-semibold text-gray-900 mb-1 relative;
+  }
+  .section-title::after {
+    content: '';
+    @apply block w-10 h-0.5 bg-indigo-500 mt-2 mb-6 rounded-full;
+  }
+  .card {
+    @apply bg-white/75 backdrop-blur-md rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  .nav-btn {
+    @apply px-4 py-2 rounded-xl text-sm font-medium text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-200 cursor-pointer;
+  }
+  .nav-btn.active {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700 hover:text-white;
+  }
+  .tag {
+    @apply inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-medium rounded-full;
+  }
+  .skill-bar {
+    @apply h-1.5 bg-gray-100 rounded-full overflow-hidden;
+  }
+  .skill-bar-fill {
+    @apply h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000 ease-out;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-indigo-400 focus:bg-white transition-all duration-200;
+  }
+  .btn-primary {
+    @apply px-6 py-3 bg-indigo-600 text-white text-sm font-medium rounded-xl hover:bg-indigo-700 active:scale-95 transition-all duration-200 cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .font-inter { font-family: 'Inter', sans-serif; }
+  .font-outfit { font-family: 'Outfit', sans-serif; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .animate-slide-in {
+    animation: slideIn 0.4s ease-out;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
