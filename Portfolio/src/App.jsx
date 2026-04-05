@@ -47,7 +47,7 @@ function App() {
         <Navbar active={active} setActive={setActive} isMobile={true} />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
+      <div className="max-w-5xl mx-auto px-4 pt-3 pb-8 sm:px-6 sm:pt-4 sm:pb-12">
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           {/* ── Left Sidebar ── */}
           <Profile />

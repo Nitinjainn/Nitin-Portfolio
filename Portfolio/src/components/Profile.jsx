@@ -1,4 +1,5 @@
 import avatar from '../assets/favicon.png';
+import ResumeNitin from '../assets/Resume.pdf';
 
 const contactItems = [
   {
@@ -69,11 +70,38 @@ const socials = [
     ),
   },
   {
-    href: 'https://instagram.com',
+    href: ResumeNitin,
+    label: 'Resume',
+    icon: (
+      <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+      </svg>
+    ),
+  },
+  {
+    href: 'https://www.instagram.com/nitin_jain__07',
     label: 'Instagram',
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+      </svg>
+    ),
+  },
+  {
+    href: 'https://discord.com/users/nitinjain007',
+    label: 'Discord',
+    icon: (
+      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+      </svg>
+    ),
+  },
+  {
+    href: 'https://leetcode.com/u/nitin_jain007/',
+    label: 'LeetCode',
+    icon: (
+      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L11.3 6.004l5.418 5.81c.231.231.682.355 1.05.355.334 0 .61-.19.83-.418.423-.423.447-1.144.02-1.574L13.195 4.39l-2.585-2.77A1.56 1.56 0 0 0 9.878 1a1.276 1.276 0 0 0-.913.414l3.141 3.364ZM14.98 19.009c-2.316.037-4.63.13-6.945.244-.247.012-.48.24-.48.498 0 .285.234.484.48.484l6.953-.257c.28-.01.5-.246.5-.526 0-.3-.22-.519-.508-.443Z" />
       </svg>
     ),
   },
@@ -85,7 +113,7 @@ export default function Profile() {
       <div className="card p-6 sm:p-8 flex flex-col items-center gap-5 sm:gap-6">
         {/* Avatar */}
         <div className="relative">
-          <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-sm">
+          <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-sm">
             <img
               src={avatar}
               alt="Nitin Jain"
@@ -95,7 +123,7 @@ export default function Profile() {
         </div>
 
         {/* Name & Role */}
-        <div className="text-center mt-2">
+        <div className="text-center mt-2 w-full">
           <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">Nitin Jain</h1>
           <span className="mt-2 inline-block px-4 py-1.5 bg-gray-100 text-gray-500 text-[11px] sm:text-xs font-medium tracking-wide rounded-xl">
             Full Stack Developer
@@ -124,19 +152,37 @@ export default function Profile() {
         <hr className="w-full border-gray-100" />
 
         {/* Social Links */}
-        <div className="flex items-center gap-4 sm:gap-3">
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
-              className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-xl bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200"
-            >
-              {s.icon}
-            </a>
-          ))}
+        <div className="flex flex-col items-center gap-3 w-full">
+          {/* Top Row (4 links) */}
+          <div className="flex items-center justify-center gap-3 sm:gap-3">
+            {socials.slice(0, 4).map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
+          {/* Bottom Row (3 links) */}
+          <div className="flex items-center justify-center gap-3 sm:gap-3">
+            {socials.slice(4).map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </aside>
