@@ -26,7 +26,7 @@ export default function BackgroundIcons() {
           src={icon.name === 'java' ? 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' : `https://cdn.simpleicons.org/${icon.name}/e5e7eb`}
           alt=""
           loading="lazy"
-          className={`absolute ${icon.size} ${icon.rotation} opacity-50 select-none object-contain ${icon.name === 'java' ? 'grayscale opacity-30 contrast-200 brightness-150' : ''}`}
+          className={`absolute ${icon.size} ${icon.rotation} opacity-50 dark:opacity-[0.15] select-none object-contain transition-opacity duration-500 ${icon.name === 'java' ? 'grayscale contrast-200 brightness-150' : ''}`}
           style={{ left: icon.x, top: icon.y }}
         />
       ))}

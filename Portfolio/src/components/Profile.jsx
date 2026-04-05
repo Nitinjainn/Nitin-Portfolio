@@ -110,7 +110,7 @@ const socials = [
 export default function Profile() {
   return (
     <aside className="w-full lg:w-72 shrink-0 lg:sticky lg:top-6 lg:self-start">
-      <div className="card p-6 sm:p-8 flex flex-col items-center gap-5 sm:gap-6">
+      <div className="card p-6 sm:p-8 pt-6 sm:pt-6 pb-8 sm:pb-6 flex flex-col items-center gap-5 sm:gap-6">
         {/* Avatar */}
         <div className="relative">
           <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-sm">
@@ -124,32 +124,32 @@ export default function Profile() {
 
         {/* Name & Role */}
         <div className="text-center mt-2 w-full">
-          <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">Nitin Jain</h1>
-          <span className="mt-2 inline-block px-4 py-1.5 bg-gray-100 text-gray-500 text-[11px] sm:text-xs font-medium tracking-wide rounded-xl">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 dark:text-white tracking-tight transition-colors duration-500">Nitin Jain</h1>
+          <span className="mt-2 inline-block px-4 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 text-[11px] sm:text-xs font-medium tracking-wide rounded-xl transition-colors duration-500">
             Full Stack Developer
           </span>
         </div>
 
-        <hr className="w-full border-gray-100" />
+        <hr className="w-full border-gray-100 dark:border-gray-700/50 transition-colors duration-500" />
 
         {/* Contact Info */}
         <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-3">
           {contactItems.map((item) => (
             <li key={item.label} className="flex items-start gap-4 sm:gap-3">
-              <div className="w-10 h-10 sm:w-8 sm:h-8 shrink-0 bg-indigo-50 rounded-xl sm:rounded-lg flex items-center justify-center text-indigo-500">
+              <div className="w-10 h-10 sm:w-8 sm:h-8 shrink-0 bg-indigo-50 dark:bg-indigo-900/40 rounded-xl sm:rounded-lg flex items-center justify-center text-indigo-500 dark:text-indigo-400 transition-colors duration-500">
                 {item.icon}
               </div>
               <div className="min-w-0 flex flex-col justify-center">
-                <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-0.5">
+                <p className="text-[10px] font-bold text-gray-400 dark:text-gray-500 tracking-widest uppercase mb-0.5 transition-colors duration-500">
                   {item.label}
                 </p>
-                <p className="text-sm sm:text-[13px] xl:text-sm text-gray-700 font-medium truncate">{item.value}</p>
+                <p className="text-sm sm:text-[13px] xl:text-sm text-gray-700 dark:text-gray-300 font-medium truncate transition-colors duration-500">{item.value}</p>
               </div>
             </li>
           ))}
         </ul>
 
-        <hr className="w-full border-gray-100" />
+        <hr className="w-full border-gray-100 dark:border-gray-700/50 transition-colors duration-500" />
 
         {/* Social Links */}
         <div className="flex flex-col items-center gap-3 w-full">
@@ -162,7 +162,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 dark:bg-gray-800/80 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
               >
                 {s.icon}
               </a>
@@ -177,7 +177,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 dark:bg-gray-800/80 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
               >
                 {s.icon}
               </a>

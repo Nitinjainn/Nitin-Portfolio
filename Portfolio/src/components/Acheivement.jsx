@@ -6,7 +6,7 @@ const achievements = [
     prize: "$1000",
   },
   {
-    title: "2nd Place Winner",
+    title: "2nd Place Winner (Among 100+ Teams)",
     subtitle: "TEK Connect 2024 (National Hackathon)",
     desc: "Secured 2nd place among 100+ competing teams for rapid development and highly innovative problem-solving.",
     prize: "2nd Place",
@@ -30,7 +30,7 @@ const achievements = [
     prize: "Top 10",
   },
   {
-    title: "Best Non-Final Year Project",
+    title: "Best Non-Final Year Project (Under top 10)",
     subtitle: "Kalanidhi 2025",
     desc: "Our project was formally recognized and ranked highest for its practical approach, quality code, and execution.",
     prize: "Best Project",
@@ -47,7 +47,7 @@ export default function Achievement() {
   return (
     <div className="animate-slide-in space-y-10">
       <div className="flex items-center gap-4 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 relative">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white relative transition-colors duration-500">
           Achievements
           <span className="absolute -bottom-2 left-0 w-10 h-0.5 bg-indigo-500 rounded-full"></span>
         </h2>
@@ -57,30 +57,30 @@ export default function Achievement() {
         {achievements.map((a, i) => (
           <div
             key={i}
-            className="relative p-5 sm:p-8 bg-white/60 backdrop-blur-xl border border-gray-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-[1.5rem] sm:rounded-3xl overflow-hidden cursor-pointer group hover:bg-white/80 transition-colors"
+            className="relative p-5 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-gray-200 dark:border-gray-700 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-[1.5rem] sm:rounded-3xl overflow-hidden cursor-pointer group hover:bg-white/80 dark:hover:bg-gray-800/80 transition-colors duration-500"
           >
             {/* Elegant Static Watermark */}
-            <div className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 text-[30px] sm:text-[55px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 overflow-hidden max-w-[90%] text-right">
+            <div className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 text-[30px] sm:text-[55px] font-black text-gray-200/50 dark:text-gray-700/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 overflow-hidden max-w-[90%] text-right transition-colors duration-500">
               {a.prize}
             </div>
 
             {/* Visual Anchor Node */}
-            <div className="absolute top-0 right-8 sm:right-10 w-10 sm:w-12 h-1 bg-indigo-100 rounded-b-md"></div>
+            <div className="absolute top-0 right-8 sm:right-10 w-10 sm:w-12 h-1 bg-indigo-100 dark:bg-indigo-900/50 rounded-b-md transition-colors duration-500"></div>
 
             {/* Content Container (Layered above watermark) */}
             <div className="relative z-10 flex flex-col h-full">
               <div className="mb-auto">
-                <div className="inline-flex items-center mb-3 sm:mb-4 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-gray-50/80 text-gray-600 border border-gray-100 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest rounded-xl">
+                <div className="inline-flex items-center mb-3 sm:mb-4 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-gray-50/80 dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-700 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest rounded-xl transition-colors duration-500">
                   {a.subtitle}
                 </div>
                 
-                <h3 className="text-[17px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug mb-2 sm:mb-3 drop-shadow-sm">
+                <h3 className="text-[17px] sm:text-[22px] font-bold text-gray-900 dark:text-white font-cinzel tracking-tight leading-snug mb-2 sm:mb-3 drop-shadow-sm transition-colors duration-500">
                   {a.title}
                 </h3>
               </div>
 
-              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100/50">
-                <p className="text-[12px] sm:text-sm text-gray-600 leading-relaxed max-w-[90%]">
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100/50 dark:border-gray-700/50 transition-colors duration-500">
+                <p className="text-[12px] sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-[90%] transition-colors duration-500">
                   {a.desc}
                 </p>
               </div>
