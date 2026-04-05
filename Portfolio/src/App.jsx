@@ -4,7 +4,7 @@ import Loading         from './components/Loading';
 import Profile         from './components/Profile';
 import Navbar          from './components/Navbar';
 import Header          from './components/Header';
-import Achievement      from './components/Acheivement';
+import Achievement     from './components/Acheivement';
 import Projects        from './components/Projects';
 import Contact         from './components/Contact';
 import BackgroundIcons from './components/BackgroundIcons';
@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-inter">
+    <div className="min-h-[100dvh] bg-gray-50 font-inter relative pb-24 sm:pb-0">
       {/* Background Tech Stack Icons */}
       <BackgroundIcons />
       
@@ -42,26 +42,26 @@ function App() {
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-5xl mx-auto mt-4 py-8 sm:py-12">
+      {/* Mobile Floating Navbar */}
+      <div className="sm:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[340px]">
+        <Navbar active={active} setActive={setActive} isMobile={true} />
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           {/* ── Left Sidebar ── */}
           <Profile />
 
           {/* ── Right Content ── */}
-          <main className="flex-1 min-w-0 w-full">
+          <main className="flex-1 min-w-0 w-full mb-8 lg:mb-0">
             <div className="card relative h-full min-h-[600px] flex flex-col">
               {/* Desktop Navbar */}
               <div className="absolute top-0 right-0 z-10 hidden sm:block">
                 <Navbar active={active} setActive={setActive} />
               </div>
-              
-              {/* Mobile Navbar */}
-              <div className="sm:hidden">
-                <Navbar active={active} setActive={setActive} isMobile={true} />
-              </div>
 
               {/* Page Content */}
-              <div className="p-6 sm:p-8">
+              <div className="p-5 sm:p-8">
                 {renderContent()}
               </div>
             </div>

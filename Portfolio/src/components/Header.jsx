@@ -41,20 +41,20 @@ export default function Header() {
           </h2>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 cursor-pointer">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 cursor-pointer">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="group flex flex-col items-center justify-center gap-3 p-5 bg-white/60 backdrop-blur-xl border border-gray-100 rounded-2xl"
+              className="group flex flex-col items-center justify-center gap-2 sm:gap-3 p-3 sm:p-5 bg-white/60 backdrop-blur-xl border border-gray-100 rounded-2xl sm:rounded-[1.25rem] shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
             >
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-50/80 rounded-xl">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-gray-50/80 rounded-xl">
                 <img 
                   src={tech.customUrl || `https://cdn.simpleicons.org/${tech.icon}/${tech.color}`} 
                   alt={tech.name} 
-                  className="w-6 h-6 object-contain"
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
                 />
               </div>
-              <span className="text-[13px] font-semibold text-gray-600 group-hover:text-indigo-600 transition-colors duration-300">
+              <span className="text-[10px] sm:text-[13px] font-semibold text-gray-600 text-center break-words group-hover:text-indigo-600 transition-colors duration-300">
                 {tech.name}
               </span>
             </div>

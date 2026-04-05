@@ -57,30 +57,30 @@ export default function Achievement() {
         {achievements.map((a, i) => (
           <div
             key={i}
-            className="relative p-6 sm:p-8 bg-white/60 backdrop-blur-xl border border-gray-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden cursor-pointer"
+            className="relative p-5 sm:p-8 bg-white/60 backdrop-blur-xl border border-gray-200 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-[1.5rem] sm:rounded-3xl overflow-hidden cursor-pointer group hover:bg-white/80 transition-colors"
           >
             {/* Elegant Static Watermark */}
-            <div className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 text-[40px] sm:text-[55px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60">
+            <div className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 text-[30px] sm:text-[55px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 overflow-hidden max-w-[90%] text-right">
               {a.prize}
             </div>
 
             {/* Visual Anchor Node */}
-            <div className="absolute top-0 right-10 w-12 h-1 bg-indigo-100 rounded-b-md"></div>
+            <div className="absolute top-0 right-8 sm:right-10 w-10 sm:w-12 h-1 bg-indigo-100 rounded-b-md"></div>
 
             {/* Content Container (Layered above watermark) */}
             <div className="relative z-10 flex flex-col h-full">
               <div className="mb-auto">
-                <div className="inline-flex items-center mb-4 px-3.5 py-1.5 bg-gray-50/80 text-gray-600 border border-gray-100 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest rounded-xl">
+                <div className="inline-flex items-center mb-3 sm:mb-4 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-gray-50/80 text-gray-600 border border-gray-100 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest rounded-xl">
                   {a.subtitle}
                 </div>
                 
-                <h3 className="text-[20px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug mb-3 drop-shadow-sm">
+                <h3 className="text-[17px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug mb-2 sm:mb-3 drop-shadow-sm">
                   {a.title}
                 </h3>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-100/50">
-                <p className="text-[13px] sm:text-sm text-gray-600 leading-relaxed max-w-[90%]">
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100/50">
+                <p className="text-[12px] sm:text-sm text-gray-600 leading-relaxed max-w-[90%]">
                   {a.desc}
                 </p>
               </div>

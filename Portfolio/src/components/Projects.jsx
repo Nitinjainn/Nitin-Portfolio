@@ -59,17 +59,17 @@ export default function Projects() {
             <div className="absolute top-0 right-10 w-12 h-1 bg-indigo-100 rounded-b-md z-20"></div>
 
             {/* Elegant Static Watermark */}
-            <div className="absolute right-4 bottom-2 text-[45px] sm:text-[60px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 z-0">
+            <div className="absolute right-4 bottom-2 text-[35px] sm:text-[60px] font-black text-gray-200/50 blur-[1px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-60 z-0 overflow-hidden max-w-[90%] text-right">
               {p.title}
             </div>
 
             {/* Inset Screen Frame */}
             <div className="p-3 sm:p-4 pb-0 z-10 relative">
-              <div className="w-full h-36 sm:h-44 bg-gray-100 rounded-2xl overflow-hidden border border-gray-200/50 shadow-sm relative">
+              <div className="w-full h-40 sm:h-48 bg-gray-100 rounded-2xl overflow-hidden border border-gray-200/50 shadow-sm relative group-hover:shadow-md transition-all">
                 <img 
                   src={p.image} 
                   alt={p.title} 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover object-top" 
                 />
               </div>
             </div>
@@ -78,10 +78,10 @@ export default function Projects() {
             <div className="relative p-5 sm:p-6 z-10">
               <div className="flex justify-between items-start gap-4 mb-3">
                 <div>
-                  <h3 className="text-[20px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug drop-shadow-sm">
+                  <h3 className="text-[18px] sm:text-[22px] font-bold text-gray-900 font-cinzel tracking-tight leading-snug drop-shadow-sm">
                     {p.title}
                   </h3>
-                  <div className="text-[11px] font-bold text-indigo-500 uppercase tracking-widest mt-1">
+                  <div className="text-[10px] sm:text-[11px] font-bold text-indigo-500 uppercase tracking-widest mt-1">
                     {p.subtitle}
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export default function Projects() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   title="Visit Website"
-                  className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-50 text-indigo-600 transition-colors"
+                  className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-indigo-50/80 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors shadow-sm"
                 >
                   <svg className="w-3.5 h-3.5 ml-0.5 mb-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
@@ -100,7 +100,7 @@ export default function Projects() {
                 </a>
               </div>
 
-              <p className="text-[13px] text-gray-600 leading-relaxed mb-6 mt-2 max-w-[95%]">
+              <p className="text-[12px] sm:text-[13px] text-gray-600 leading-relaxed mb-6 mt-2 max-w-[95%]">
                 {p.desc}
               </p>
 

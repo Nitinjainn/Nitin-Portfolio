@@ -43,7 +43,7 @@ export default function Experience() {
             <div className="relative p-6 sm:p-8 bg-white/40 backdrop-blur-xl border border-white/60 rounded-[2rem] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)] overflow-hidden">
               
               {/* Luxury Brand Watermark */}
-              <div className="absolute right-4 bottom-2 text-[60px] sm:text-[80px] font-black text-gray-200/40 blur-[2px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-50">
+              <div className="absolute right-4 bottom-2 text-[45px] sm:text-[80px] font-black text-gray-200/40 blur-[2px] select-none pointer-events-none font-cinzel tracking-tighter leading-none whitespace-nowrap opacity-50 overflow-hidden max-w-[90%] text-right">
                 {exp.company}
               </div>
 
@@ -52,13 +52,13 @@ export default function Experience() {
                 
                 {/* Header Row: Duration Badge & Location */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 shadow-sm border border-gray-100 text-indigo-700 text-[11px] font-bold uppercase tracking-widest rounded-full">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 shadow-sm border border-gray-100 text-indigo-700 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest rounded-full self-start">
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-[pulse_2s_ease-in-out_infinite]"></span>
                     {exp.duration}
                   </div>
                   
-                  <div className="flex items-center gap-1.5 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                    <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
@@ -67,20 +67,20 @@ export default function Experience() {
                 </div>
 
                 {/* Company & Role */}
-                <div className="mb-5">
-                  <h3 className="text-3xl font-black text-gray-900 font-cinzel tracking-tight drop-shadow-sm">
+                <div className="mb-4 sm:mb-5">
+                  <h3 className="text-2xl sm:text-3xl font-black text-gray-900 font-cinzel tracking-tight drop-shadow-sm leading-tight">
                     {exp.company}
                   </h3>
-                  <div className="text-[13px] text-gray-400 font-medium tracking-wide mb-2 uppercase">
+                  <div className="text-[11px] sm:text-[13px] text-gray-400 font-medium tracking-wide mb-2 sm:mb-2 uppercase">
                     {exp.fullName}
                   </div>
-                  <div className="text-base font-semibold text-gray-800 tracking-wide">
+                  <div className="text-sm sm:text-base font-semibold text-gray-800 tracking-wide mt-1">
                     {exp.role}
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-[13.5px] sm:text-sm text-gray-500 leading-relaxed max-w-2xl mb-6">
+                <p className="text-[12px] sm:text-sm text-gray-500 leading-relaxed max-w-2xl mb-6">
                   {exp.description}
                 </p>
 

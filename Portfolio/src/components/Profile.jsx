@@ -81,11 +81,11 @@ const socials = [
 
 export default function Profile() {
   return (
-    <aside className="w-72 shrink-0 sticky top-6 self-start">
-      <div className="card p-6 flex flex-col items-center gap-5">
+    <aside className="w-full lg:w-72 shrink-0 lg:sticky lg:top-6 lg:self-start">
+      <div className="card p-6 sm:p-8 flex flex-col items-center gap-5 sm:gap-6">
         {/* Avatar */}
         <div className="relative">
-          <div className="w-48 h-48 rounded-full overflow-hidden shadow-sm">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-sm">
             <img
               src={avatar}
               alt="Nitin Jain"
@@ -96,8 +96,8 @@ export default function Profile() {
 
         {/* Name & Role */}
         <div className="text-center mt-2">
-          <h1 className="text-4xl font-semibold text-gray-900 tracking-tight">Nitin Jain</h1>
-          <span className="mt-2 inline-block px-4 py-1 bg-gray-100 text-gray-500 text-xs rounded-xl">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">Nitin Jain</h1>
+          <span className="mt-2 inline-block px-4 py-1.5 bg-gray-100 text-gray-500 text-[11px] sm:text-xs font-medium tracking-wide rounded-xl">
             Full Stack Developer
           </span>
         </div>
@@ -105,17 +105,17 @@ export default function Profile() {
         <hr className="w-full border-gray-100" />
 
         {/* Contact Info */}
-        <ul className="w-full space-y-3">
+        <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-3">
           {contactItems.map((item) => (
-            <li key={item.label} className="flex items-start gap-3">
-              <div className="w-8 h-8 shrink-0 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-500">
+            <li key={item.label} className="flex items-start gap-4 sm:gap-3">
+              <div className="w-10 h-10 sm:w-8 sm:h-8 shrink-0 bg-indigo-50 rounded-xl sm:rounded-lg flex items-center justify-center text-indigo-500">
                 {item.icon}
               </div>
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold text-gray-400 tracking-widest uppercase mb-0.5">
+              <div className="min-w-0 flex flex-col justify-center">
+                <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-0.5">
                   {item.label}
                 </p>
-                <p className="text-sm text-gray-700 font-medium truncate">{item.value}</p>
+                <p className="text-sm sm:text-[13px] xl:text-sm text-gray-700 font-medium truncate">{item.value}</p>
               </div>
             </li>
           ))}
@@ -124,7 +124,7 @@ export default function Profile() {
         <hr className="w-full border-gray-100" />
 
         {/* Social Links */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4 sm:gap-3">
           {socials.map((s) => (
             <a
               key={s.label}
@@ -132,7 +132,7 @@ export default function Profile() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 text-gray-500 hover:text-black transition-all duration-200"
+              className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-xl bg-gray-100/80 text-gray-500 hover:text-black hover:bg-gray-200 transition-all duration-200"
             >
               {s.icon}
             </a>
