@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -8,11 +9,40 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    setForm({ name: '', email: '', subject: '', message: '' });
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error(
+        'EmailJS env vars missing. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY.'
+      );
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          to_email: 'nitinjain18072005@gmail.com',
+          from_name: form.name,
+          reply_to: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        { publicKey }
+      );
+
+      setSent(true);
+      setTimeout(() => setSent(false), 4000);
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      console.error('Email send failed', err);
+    }
   }
 
   return (
