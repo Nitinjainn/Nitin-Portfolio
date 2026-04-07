@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-const API_URL = 'https://programming-quotes-api-pi.vercel.app/quotes/random';
+// CORS-friendly in browsers.
+const API_URL = 'https://geek-quote-api.vercel.app/v1/quote';
 
 export default function RandomDevQuote() {
   const [quote, setQuote] = useState('');
@@ -16,7 +17,7 @@ export default function RandomDevQuote() {
         if (!res.ok) throw new Error(`Request failed: ${res.status}`);
         const json = await res.json();
 
-        const text = (json?.en || json?.quote || '').trim();
+        const text = (json?.quote || '').trim();
         if (!alive) return;
         setQuote(text || 'Ship. Learn. Repeat.');
       } catch {
