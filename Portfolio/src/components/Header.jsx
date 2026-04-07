@@ -1,4 +1,6 @@
 import Experience from './Experience';
+import CodingProfile from './CodingProfile';
+import RandomDevQuote from './RandomDevQuote';
 
 const techStack = [
   { name: "React.js",    icon: "react",       color: "61DAFB" },
@@ -61,6 +63,12 @@ export default function Header() {
           ))}
         </div>
       </section>
+
+      {/* Coding Profile (LeetCode Stats) */}
+      <CodingProfile />
+
+      {/* Random dev quote */}
+      <RandomDevQuote />
     </div>
   );
 }
