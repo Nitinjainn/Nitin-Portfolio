@@ -1,4 +1,6 @@
-import avatar from '../assets/favicon.png';
+import { useEffect, useState } from 'react';
+import avatar from '../assets/avatar.jpg';
+import realPhoto from '../assets/xyz.png';
 import ResumeNitin from '../assets/Resume.pdf';
 
 const contactItems = [
@@ -99,18 +101,84 @@ const socials = [
 ];
 
 export default function Profile() {
+  const [showRealPhoto, setShowRealPhoto] = useState(false);
+  const [isSwitching, setIsSwitching] = useState(false);
+
+  useEffect(() => {
+    if (!isSwitching) return;
+    const t = setTimeout(() => setIsSwitching(false), 720);
+    return () => clearTimeout(t);
+  }, [isSwitching]);
+
   return (
     <aside className="w-full lg:w-72 shrink-0 lg:sticky lg:top-8 lg:self-start mt-6">
       <div className="card p-6 sm:p-8 pt-6 sm:pt-6 pb-8 sm:pb-6 flex flex-col items-center gap-5 sm:gap-6">
+        <style>
+          {`
+            @keyframes photo-sweep {
+              0%   { transform: translateX(-140%) rotate(18deg); opacity: 0; }
+              18%  { opacity: 0.45; }
+              55%  { opacity: 0.16; }
+              100% { transform: translateX(140%) rotate(18deg); opacity: 0; }
+            }
+            @keyframes photo-ripple {
+              0%   { transform: scale(0.84); opacity: 0; }
+              20%  { opacity: 0.35; }
+              100% { transform: scale(1.2); opacity: 0; }
+            }
+          `}
+        </style>
+
         {/* Avatar */}
         <div className="relative">
-          <div className="w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-sm">
+          <button
+            type="button"
+            onClick={() => {
+              setIsSwitching(true);
+              setShowRealPhoto((v) => !v);
+            }}
+            className={`w-32 h-32 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-sm focus:outline-none group relative [perspective:900px] transition-transform duration-700 ease-out ${
+              isSwitching ? 'scale-[1.01]' : 'scale-100'
+            }`}
+            aria-label="Toggle profile photo"
+            title="Click to change photo"
+          >
+            {/* Signature sweep + ripple (only during toggle) */}
+            {isSwitching && (
+              <>
+                <span
+                  className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-indigo-500/25 dark:ring-indigo-400/20"
+                  style={{ animation: 'photo-ripple 720ms ease-out both' }}
+                />
+                <span className="pointer-events-none absolute inset-0 rounded-full overflow-hidden" aria-hidden="true">
+                  <span
+                    className="absolute -inset-y-10 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/45 to-transparent dark:via-white/20 blur-md"
+                    style={{ animation: 'photo-sweep 720ms ease-out both' }}
+                  />
+                </span>
+              </>
+            )}
+
             <img
               src={avatar}
               alt="Nitin Jain"
-              className="w-full h-full object-cover"
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out will-change-transform ${
+                showRealPhoto ? 'opacity-0 scale-[1.03] blur-sm' : 'opacity-100 scale-100 blur-0'
+              }`}
+              draggable={false}
             />
-          </div>
+            <img
+              src={realPhoto}
+              alt="Nitin Jain"
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out will-change-transform ${
+                showRealPhoto ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-[1.03] blur-sm'
+              }`}
+              draggable={false}
+            />
+
+            {/* subtle glass highlight for premium feel */}
+            <span className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-white/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          </button>
         </div>
 
         {/* Name & Role */}
