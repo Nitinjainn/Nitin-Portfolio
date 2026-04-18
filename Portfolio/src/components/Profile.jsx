@@ -221,7 +221,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 dark:bg-gray-800/80 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+                className="group w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-50 dark:bg-gray-800/40 text-gray-400 dark:text-gray-500 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white hover:scale-[1.15] hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-gray-100 dark:hover:border-gray-600 transition-all duration-300 ease-out"
               >
                 {s.icon}
               </a>
@@ -236,7 +236,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-100/80 dark:bg-gray-800/80 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)]"
+                className="group w-12 h-12 flex items-center justify-center rounded-2xl sm:rounded-[0.85rem] bg-gray-50 dark:bg-gray-800/40 text-gray-400 dark:text-gray-500 hover:bg-white dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white hover:scale-[1.15] hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-gray-100 dark:hover:border-gray-600 transition-all duration-300 ease-out"
               >
                 {s.icon}
               </a>
